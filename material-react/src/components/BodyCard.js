@@ -5,6 +5,15 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+// 2.8-1a カードの ヘッダー を追加
+import CardHeader from '@material-ui/core/CardHeader';
+import Avatar from '@material-ui/core/Avatar';
+// 2.8-1b カードの アイコン を追加
+import IconButton from '@material-ui/core/IconButton';
+import StarBorderOutlinedIcon from '@material-ui/icons/StarBorderOutlined';
+// 2.8-2 アバターと画像はランダムで取得できるようにする。
+import { CardMedia } from '@material-ui/core';
+
 
 const useStyles = makeStyles({
     bullet: {
@@ -20,31 +29,39 @@ const useStyles = makeStyles({
     },
 });
 
+// 2.8-2 propsを引数に受け取る
+function BodyCard(props) {
+    // 2.8-2 Content.jsの<BodyCard />で設定したオブジェクトをpropsに定義、returnの中の各コンポネントに渡す
+    const { avatarUrl, title, subheader, text, imageUrl } = props;
 
-function BodyCard() {
     const classes = useStyles();
-    const bull = <span className={classes.bullet}>•</span>;
+    // 2.8-2 bullを追加
+    const bull = <span className={classes.bullet}>•</span>; 
     return (
         <Card variant="outlined">
-            <CardContent>
+          {/* 2.8-1a カードの ヘッダー を追加 */}
+          <CardHeader
+            avatar={<Avatar src={avatarUrl}/>}            
+            action={
+            // 2.8-1b カードの アイコン を追加
+            <IconButton aria-label="settings">
+                <StarBorderOutlinedIcon />
+            </IconButton>
+            }
+            title={title}
+            subheader={subheader}
+        />
+          {/* 2.8-2 CardMedia を追加 */}
+          <CardMedia style={{ height: "150px" }} image={imageUrl} />
+          <CardContent>
             <Typography className={classes.title} color="textSecondary" gutterBottom>
-                Word of the Day
+                {text}
             </Typography>
-            <Typography variant="h5" component="h2">
-                be{bull}nev{bull}o{bull}lent
-            </Typography>
-            <Typography className={classes.pos} color="textSecondary">
-                adjective
-            </Typography>
-            <Typography variant="body2" component="p">
-                well meaning and kindly.
-                <br />
-                {'"a benevolent smile"'}
-            </Typography>
-            </CardContent>
-            <CardActions>
-            <Button size="small">Learn More</Button>
-            </CardActions>
+          </CardContent>
+          <CardActions>
+            {/* 2.8-2 ボタン表示の更新 */}
+            <Button size="small">詳細をみる</Button>
+          </CardActions>
         </Card>
     );
 }

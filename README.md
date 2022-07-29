@@ -41,16 +41,20 @@
 
 #### 2.7 コンテンツ部分 (Card) のコンポーネントを作る
 - **2.7-1** `Content.js`作成
-`cd material-react`
+`cd material-react`<br>
 `touch src/components/Content.js`
 - **2.7-2** `App.js`に`Content`を`import`
-- **2.7-3** コンポーネント`BodyCard.js`作成
+- **2.7-3** コンポーネント`BodyCard.js`作成 <br>
 `touch src/components/BodyCard.js`
 - **2.7-4** `Content.js`を編集
-- **2.7-5** スペースを入れて見た目調整 ([Grid](https://material-ui.com/components/grid/#grid)を参照)
+- **2.7-5** スペースを入れて見た目調整 ([Grid](https://material-ui.com/components/grid/#grid)を参照) <br>
 `Content.js`を編集
 
-### Material-ui
+#### 2.8 カードの見た目改造 ( ヘッダー & アイコン)
+- **2.8-1** `BodyCard.js`にカードの ヘッダー & アイコン を追加
+- **2.8-2** アバターと画像はランダムで取得できるようにする。
+
+### 3. Material-ui
 
 #### [Grid](https://material-ui.com/components/grid/#grid)  
 
@@ -61,3 +65,7 @@
 #### [Material Icons](https://mui.com/material-ui/material-icons/)
 
 #### [Card](https://mui.com/material-ui/react-card/)
+
+#### 画像をランダムで取得できるサービス
+- Avatar [https://joeschmoe.io/](https://joeschmoe.io/)
+- 画像 [https://picsum.photos](https://picsum.photos)
