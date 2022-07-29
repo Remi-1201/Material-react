@@ -16,6 +16,8 @@
 
 - **1.2-2**`npm install @material-ui/icons`
 
+- **1.2-3**`npm run build` to create a production build
+
 ### 2. 開発
 
 #### 2.1 デフォルト・フォントの更新
@@ -28,7 +30,11 @@
 - **2.4-4** ヘッダーにMaterial-uiを適用
 #### 2.5 アイコンをつける
 - **2.5-1** `material-react/src/components/Header.js`を編集
-
+#### 2.6 Material-UIでCSSを追加
+- **2.6-1** `makeStyle`を`import`
+- **2.6-2** `useStyles`関数にTypographyのCSSを書く
+- **2.6-3** `useStyles` `をclasses` 関数に代入
+- **2.6-4** `Typography`に`classes`を適用
 ### Material-ui
 
 #### [Grid](https://material-ui.com/components/grid/#grid)  

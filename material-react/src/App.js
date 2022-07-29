@@ -8,7 +8,7 @@ function App() {
     // 2.3-2 Gridの追加
     <Grid container direction="column">      
       <Grid item>
-        <Header /> // 2.4-3 ヘッダを追加
+        <Header /> {/* 2.4-3 ヘッダを追加 */}
       </Grid>
       <Grid item container>        
         <Grid sm={2} /> {/* 2.3-3 左右の余白 */}
