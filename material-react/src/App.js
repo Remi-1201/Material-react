@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import { Grid } from '@material-ui/core'; // 2.3-1 Gridの追加
 import Header from './components/Header'; // 2.4-3 ヘッダを追加
+import Content from './components/Content'; // 2.7-2 Content を追加
 
 function App() {
   return (
@@ -13,11 +14,7 @@ function App() {
       <Grid item container>        
         <Grid sm={2} /> {/* 2.3-3 左右の余白 */}
           <Grid xs={12} sm={8}>
-            item2item2item2item2item2item2item2item2item2item2item2item2
-            item2item2item2item2item2item2item2item2item2item2item2item2
-            item2item2item2item2item2item2item2item2item2item2item2item2
-            item2item2item2item2item2item2item2item2item2item2item2item2
-            item2item2item2item2item2item2item2item2item2item2item2item2
+            <Content /> {/* 2.7-2 Content を追加 */}
           </Grid>        
         <Grid sm={2} /> {/* 2.3-3 左右の余白 */}
       </Grid>
