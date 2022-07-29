@@ -23,9 +23,11 @@
 #### 2.3 Gridの追加
 #### 2.4 ヘッダーを作る
 - **2.4-1** `mkdir src/components`
-- **2.4-2** Edit `material-react/src/components/Header.js`
+- **2.4-2** `material-react/src/components/Header.js`を編集
 - **2.4-3** ヘッダーコンポーネントを`App.js`に追加
 - **2.4-4** ヘッダーにMaterial-uiを適用
+#### 2.5 アイコンをつける
+- **2.5-1** `material-react/src/components/Header.js`を編集
 
 ### Material-ui
 
@@ -34,3 +36,5 @@
 #### [App bar](https://mui.com/material-ui/react-app-bar/)
 
 #### [AppBar API](https://mui.com/material-ui/api/app-bar/)
+
+#### [Material Icons](https://mui.com/material-ui/material-icons/)
